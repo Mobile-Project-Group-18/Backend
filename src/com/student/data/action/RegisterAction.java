@@ -78,26 +78,26 @@ public class RegisterAction extends HttpServlet {
 		if (flag) {
 
 			JSONObject jsonmsg = new JSONObject();
-			jsonmsg.put("repMsg", "更新成功");
+			jsonmsg.put("repMsg", "password has been updated!");
 			jsonmsg.put("repCode", "666");
 			System.out.println(jsonmsg);
 			response.getWriter().print(jsonmsg);// 将路径返回给客户端
 
 		} else {
 			JSONObject jsonmsg = new JSONObject();
-			jsonmsg.put("repMsg", "更新失败");
+			jsonmsg.put("repMsg", "password update failed!");
 			jsonmsg.put("repCode", "111");
 			System.out.println(jsonmsg);
 			response.getWriter().print(jsonmsg);// 将路径返回给客户端
 		}
 
 	}
-
+	
 	private void updateApplyTypeId(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String path = request.getContextPath();
 		String applyTypeId = request.getParameter("applyTypeId");
 		String applyTypeName = request.getParameter("applyTypeName");
-
+		
 		String uid = request.getParameter("uid");
 		List<Object> params = new ArrayList<Object>();
 		params.add(applyTypeId);
@@ -211,7 +211,7 @@ public class RegisterAction extends HttpServlet {
 		if (name.equals("admin") && pswd.equals("123456")) {
 			response.sendRedirect(path + "/mainWeb/main.jsp");
 		} else {
-			request.setAttribute("message", "用户名或密码错误");
+			request.setAttribute("message", "wrong username or password");
 			// request.getRequestDispatcher("/login.jsp").forward(request,
 			// response);
 		}
@@ -286,7 +286,7 @@ public class RegisterAction extends HttpServlet {
 
 	/**
 	 * 注册
-	 *
+	 * 
 	 * @param request
 	 * @param response
 	 * @throws ServletException
@@ -299,7 +299,7 @@ public class RegisterAction extends HttpServlet {
 		String upswd = request.getParameter("upswd");
 		String uphone = request.getParameter("uphone");
 		String utype = request.getParameter("utype");
-
+		
 		System.out.println(uname);
 
 		List<Object> params_check_login = new ArrayList<Object>();
@@ -336,12 +336,12 @@ public class RegisterAction extends HttpServlet {
 
 			// 注册成功处理
 			if (flag_zhuce) {
-				jsonmsg.put("repMsg", "注册成功");
+				jsonmsg.put("repMsg", "successful registration!");
 				jsonmsg.put("repCode", "666");
 				response.getWriter().print(jsonmsg);// 将路径返回给客户端
 				System.out.println(jsonmsg);
 			} else {
-				jsonmsg.put("repMsg", "注册失败");
+				jsonmsg.put("repMsg", "registration failed!");
 				jsonmsg.put("repCode", "111");
 				response.getWriter().print(jsonmsg);// 将路径返回给客户端
 				System.out.println(jsonmsg);
@@ -355,7 +355,7 @@ public class RegisterAction extends HttpServlet {
 
 	/**
 	 * 获取用户信息
-	 *
+	 * 
 	 * @param request
 	 * @param response
 	 * @throws ServletException
@@ -390,7 +390,7 @@ public class RegisterAction extends HttpServlet {
 
 		} else {
 			JSONObject jsonmsg = new JSONObject();
-			jsonmsg.put("repMsg", "用户名或密码不正确");
+			jsonmsg.put("repMsg", "wrong username or password");
 			jsonmsg.put("repCode", "111");
 			System.out.println(jsonmsg);
 			response.getWriter().print(jsonmsg);// 将路径返回给客户端

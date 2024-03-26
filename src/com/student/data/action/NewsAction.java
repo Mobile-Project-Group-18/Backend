@@ -249,7 +249,7 @@ public class NewsAction extends HttpServlet {
 			System.out.println(jsonmsg);
 		} else {
 			JSONObject jsonmsg = new JSONObject();
-			jsonmsg.put("repMsg", "用户名或密码不正确");
+			jsonmsg.put("repMsg", "wrong username or password");
 			jsonmsg.put("repCode", "111");
 			System.out.println(jsonmsg);
 			response.getWriter().print(jsonmsg);// 将路径返回给客户端
