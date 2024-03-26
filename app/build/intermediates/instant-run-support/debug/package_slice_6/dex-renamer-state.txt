@@ -1,0 +1,4 @@
+#Tue Mar 26 08:13:34 EET 2024
+base.0=C\:\\Users\\WANGKUI\\A705Rental\\RentalProject\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\25
+path.0=classes.dex
+renamed.0=classes.dex

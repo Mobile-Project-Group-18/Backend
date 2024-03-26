@@ -1,0 +1,139 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_login"
+    android:orientation="vertical"
+    tools:context=".UnLoginActiviy" >
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/title_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="#ffffff"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="房源信息："
+                    android:textColor="#666666"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/houseName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="houseName"
+                    android:textColor="#ff0000"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/houseMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="houseMoney"
+                    android:textColor="#666666"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="#ffffff"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="预约信息："
+                    android:textColor="#666666"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="userName"
+                    android:textColor="#ff0000"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/userPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="userPhone"
+                    android:textColor="#666666"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/mtvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="2017-10-30 15:37"
+                    android:textColor="#666666"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/mbtnOk"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/select_btn"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="同意租客请求"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/mbtnNo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/select_btn"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="拒绝租客请求"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
